@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag-and-Drop Playground</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar with draggable elements -->
+      <div class="sidebar">
+        <div class="element" draggable="true" data-type="text">
+          <span>Text</span>
+        </div>
+        <div class="element" draggable="true" data-type="image">
+          <span>Image</span>
+        </div>
+        <div class="element" draggable="true" data-type="shape">
+          <span>Shape</span>
+        </div>
+      </div>
+
+      <!-- Playground area -->
+      <div class="playground" id="playground">
+        <p>Drag elements here</p>
+      </div>
+
+      <!-- Properties panel -->
+      <div class="properties-panel" id="properties-panel">
+        <h3>Properties</h3>
+        <form id="properties-form">
+          <div id="text-properties" class="property-group">
+            <label>Font Family: <input type="text" name="font-family" /></label>
+            <label>Font Size: <input type="number" name="font-size" /></label>
+            <label><input type="checkbox" name="bold" /> Bold</label>
+            <label><input type="checkbox" name="italic" /> Italic</label>
+            <label><input type="checkbox" name="underline" /> Underline</label>
+          </div>
+          <div id="image-properties" class="property-group">
+            <label
+              >Image Source: <input type="text" name="image-source"
+            /></label>
+          </div>
+          <div id="shape-properties" class="property-group">
+            <label>SVG Path: <input type="text" name="svg-path" /></label>
+          </div>
+          <div id="common-properties" class="property-group">
+            <label>Width: <input type="number" name="width" /></label>
+            <label>Height: <input type="number" name="height" /></label>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
